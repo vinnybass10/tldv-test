@@ -1,0 +1,15 @@
+node_modules
+jspm_packages
+.serverless
+.build
+.nyc_output
+coverage
+package-lock.json
+out-logger.json
+.DS_Store
+config/*
+!config/env.stage.example.json
+.idea/
+.env.dev.json
+.env.prod.json
+.dynamoDb
