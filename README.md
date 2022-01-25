@@ -75,23 +75,23 @@ Once the application is up and with the migrations already executed, it is first
 
 You will receive an auth token, with the token you can hit the following routes passing this token as a [Bearer Token](https://internationaltradeadministration.github.io/DevPortalMessages/IntroToNewAuthType.html#:~:text=If%20you're%20using%20Insomnia,in%20the%20%E2%80%9CPREFIX%E2%80%9D%20field.):
 
-`POST /video Create Video` -> pass the follow params, all required, the `url` and `thumbailUrl` should be an valid url
+`POST /videos Create Video` -> pass the follow params, all required, the `url` and `thumbailUrl` should be an valid url
 ```ssh
 {
 	"name": "Video Teste 2",
-	"url": "www.youtube.co/hahhaha",
-	"thumbnailUrl": "www.testseasdasrver.com/img001",
+	"url": "http://youtube.co/hahhaha",
+	"thumbnailUrl": "http://testseasdasrver.com/img001",
 	"isPrivate": false
 }
 ```
 
-`GET /video Get video list` -> You must pass the limit and offset parameters in the querystring. Filters are the fields present in the video entity. With the addition of a parameter called moreViewsThen that will be responsible for bringing videos with a greater number of views than the one passed in the parameter
+`GET /videos Get video list` -> You must pass the limit and offset parameters in the querystring. Filters are the fields present in the video entity. With the addition of a parameter called moreViewsThen that will be responsible for bringing videos with a greater number of views than the one passed in the parameter
 
-`GET /video/:id Get Video by ID` -> pass the video ID on path parameter
+`GET /videos/:id Get Video by ID` -> pass the video ID on path parameter
 
-`DELETE /video/:id Delete Video by ID` -> pass the video ID on path parameter
+`DELETE /videos/:id Delete Video by ID` -> pass the video ID on path parameter
 
-`PUT /video/:id Update Video by ID` -> pass the video ID on path parameter. For the body, you can pass the attributes that you want to change.
+`PUT /videos/:id Update Video by ID` -> pass the video ID on path parameter. For the body, you can pass the attributes that you want to change.
 
 
 ### How to run the tests
