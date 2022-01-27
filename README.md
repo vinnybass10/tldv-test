@@ -40,6 +40,11 @@ This API was also built with TDD in mind so it is easy to perform tests for each
 
 This API uses docker to run the application and the database (mysql), to start the container just follow the steps below.
 
+Install dependencies
+```sh
+yarn install
+```
+
 Run the docker containers (you must have docker installed on your machine, and ensure that ports 3000 and 3306 on your machine are free)
 ```sh
 docker-compose up -d --build
