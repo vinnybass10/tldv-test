@@ -40,16 +40,20 @@ This API was also built with TDD in mind so it is easy to perform tests for each
 
 This API uses docker to run the application and the database (mysql), to start the container just follow the steps below.
 
-Install dependencies
+Start the container for the first time ever. (This will build the image without cache, run the image and run the migrations)
 ```sh
-yarn install
+$ source initial_setup.sh
 ```
 
 Run the docker containers (you must have docker installed on your machine, and ensure that ports 3000 and 3306 on your machine are free)
 ```sh
-docker-compose up -d --build
+$ source start.sh
 ```
-(You can track it better by taking the -d parameter off, and track the logs, the connection will be up once the `Connection stabelish` log is printed)
+
+Stop the containers
+```sh
+$ source stop.sh
+```
 
 Check if everything went well by running the command below
 ```sh
@@ -60,11 +64,6 @@ Two listed images should appear.
 CONTAINER ID   IMAGE      COMMAND                  CREATED        STATUS       PORTS                               NAMES
 46e4871fa8d7   tldv_app   "docker-entrypoint.s…"   22 hours ago   Up 2 hours   0.0.0.0:3000->3000/tcp              app-tldv
 61f952238ec2   mysql      "docker-entrypoint.s…"   22 hours ago   Up 2 hours   0.0.0.0:3306->3306/tcp, 33060/tcp   database-tldv
-```
-
-Now run the migrations
-```sh
-$ yarn run-migrations
 ```
 
 ### API Routes
